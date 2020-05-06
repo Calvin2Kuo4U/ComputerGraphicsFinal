@@ -1,0 +1,12 @@
+Each Level requires at the least the following structure (See SampleScene for example):
+	-Scene
+		-Level Manager (Object that contains name of the level.)
+		-Level Geometry (Object that contains the floor of the given zone and its associated collider)
+			-ZoneTrigger (Object containing a trigger that defines a given "zone" and the ZoneProperties script
+				(ZoneProperties defines center of zone, where the camera can move in the Z axis, and where all hitboxes should move to in 2D mode)
+			-Platforms (Object containing HitboxManager script)
+				-3D Hitboxes (Empty object used to contain all other platforms in the level)
+					-Meshes and colliders for all levels in the platform are children.
+		-Player (Prefab for the player)
+		-Player-Camera Tracker (Prefab for the camera)
+		-Optional items (like keys)
